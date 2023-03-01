@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Styled CRUD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="app">
+      <h1>Blog Posts</h1>
+      <button id="add-post-btn">Add Post</button>
+      <ul id="post-list"></ul>
+    </main>
+
+    <dialog id="add-post-dialog">
+      <h2>Add Post</h2>
+      <form>
+        <label for="post-title">Title:</label>
+        <input type="text" id="post-title" required />
+        <label for="post-date">Date:</label>
+        <input type="date" id="post-date" required />
+        <label for="post-summary">Summary:</label>
+        <textarea id="post-summary" required></textarea>
+        <button type="submit">Save</button>
+        <button type="button" id="cancel-add-post-btn">Cancel</button>
+      </form>
+    </dialog>
+
+    <dialog id="edit-post-dialog">
+      <h2>Edit Post</h2>
+      <form>
+        <input type="hidden" id="edit-post-id" />
+        <label for="edit-post-title">Title:</label>
+        <input type="text" id="edit-post-title" required />
+        <label for="edit-post-date">Date:</label>
+        <input type="date" id="edit-post-date" required />
+        <label for="edit-post-summary">Summary:</label>
+        <textarea id="edit-post-summary" required></textarea>
+        <button type="submit">Save</button>
+        <button type="button" id="cancel-edit-post-btn">Cancel</button>
+      </form>
+    </dialog>
+
+    <script type="module" src="styledposts.js"></script>
+  </body>
+</html>

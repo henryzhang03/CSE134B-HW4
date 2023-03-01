@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blog Posts CRUD</title>
+    <script type="text/javascript" src="dompurify/dist/purify.min.js"></script>
+    <style>
+      dialog {
+        padding: 40px;
+      }
+
+      form > * {
+        margin-bottom: 10px;
+      }
+
+      form > label {
+        font-weight: bold;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Blog Posts</h1>
+    <ul id="posts-container"></ul>
+    <button id="add-post-btn">Add Post</button>
+    <dialog id="add-post-dialog">
+      <form id="add-post-form">
+        <label for="title-input">Title:</label>
+        <input id="title-input" type="text" required />
+        <label for="date-input">Date:</label>
+        <input id="date-input" type="date" required />
+        <label for="summary-input">Summary:</label>
+        <textarea id="summary-input" rows="3" required></textarea>
+        <button type="submit">Add Post</button>
+        <button type="button" id="cancel-add-post-btn">Cancel</button>
+      </form>
+    </dialog>
+    <dialog id="edit-post-dialog">
+      <form id="edit-post-form">
+        <input id="edit-post-id-input" type="hidden" required />
+        <label for="edit-title-input">Title:</label>
+        <input id="edit-title-input" type="text" required />
+        <label for="edit-date-input">Date:</label>
+        <input id="edit-date-input" type="date" required />
+        <label for="edit-summary-input">Summary:</label>
+        <textarea id="edit-summary-input" rows="3" required></textarea>
+        <button type="submit">Update Post</button>
+        <button type="button" id="cancel-edit-post-btn">Cancel</button>
+      </form>
+    </dialog>
+    <dialog id="delete-post-dialog">
+      <h2>Delete post?</h2>
+      <br />
+      <button id="delete-post-cancel">Cancel</button>
+      <button id="delete-post-ok">Ok</button>
+    </dialog>
+    <script type="module" src="blog.js"></script>
+  </body>
+</html>

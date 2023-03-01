@@ -1,0 +1,14 @@
+{
+  "name": "cse134-hw3-main",
+  "version": "1.0.0",
+  "description": "Name: Henry Zhang PID: A16928014",
+  "main": "customdialog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dompurify": "^3.0.0"
+  }
+}

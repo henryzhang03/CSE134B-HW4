@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Custom Dialogs</title>
+    <script type="text/javascript" src="dompurify/dist/purify.min.js"></script>
+    <style>
+      #output {
+        font-size: 18px;
+        padding: 8px;
+        margin-top: 8px;
+        border: 1px solid #000;
+        width: fit-content;
+        display: none;
+      }
+
+      a {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      dialog {
+        padding: 20px;
+      }
+
+      #prompt-dialog > input {
+        width: 400px;
+      }
+
+      #prompt-dialog > button {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="alert-button">Alert</button>
+    <button id="confirm-button">Confirm</button>
+    <button id="prompt-button">Prompt</button>
+
+    <dialog id="alert-dialog">
+      <h2>Alert pressed!</h2>
+      <button id="alert-dialog-ok">Ok</button>
+    </dialog>
+
+    <dialog id="confirm-dialog">
+      <h2>Do you confirm this?</h2>
+      <button id="confirm-dialog-cancel">Cancel</button>
+      <button id="confirm-dialog-ok">Ok</button>
+    </dialog>
+
+    <dialog id="prompt-dialog">
+      <h2>What is your name?</h2>
+      <input type="text" id="prompt-dialog-input" />
+      <br />
+      <button id="prompt-dialog-cancel">Cancel</button>
+      <button id="prompt-dialog-ok">Ok</button>
+    </dialog>
+
+    <output id="output"></output>
+
+    <script type="module" src="customdialog.js"></script>
+  </body>
+</html>

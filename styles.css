@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Inter', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+}
+
+/* About Page */
+
+.header-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 0%;
+  list-style: none;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.header-main > div {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-left > li {
+  font-weight: 500;
+}
+
+.header-right > li {
+  padding-left: 1.25rem;
+}
+
+.header-main a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.welcome-section > hr {
+  width: 10%;
+}
+
+.welcome-text {
+  text-align: center;
+}
+
+.personal-photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  border-radius: 9999px;
+  margin-top: 2rem;
+}
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 2.25rem;
+  padding: 1.5rem 10rem;
+}
+
+.skill-list li {
+  font-weight: 500;
+}
+
+.intro-section {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.intro-section > h1 {
+  text-align: center;
+}
+
+.social-list {
+  display: flex;
+  padding-left: 0%;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+}
+
+.social-list > li {
+  width: 2rem;
+  padding-left: 1rem;
+}
+
+/* Projects Page */
+
+.projects-section > div {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.projects-section > hr {
+  width: 95%;
+}
+
+.left-project {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-project > div {
+  width: 50%;
+}
+
+.left-project img {
+  width: 100%;
+  border-radius: 1.5rem;
+}
+
+.right-project {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.right-project > div {
+  width: 50%;
+}
+
+.right-project img {
+  width: 100%;
+  border-radius: 1.5rem;
+}
+
+.right-project > .project-description {
+  text-align: right;
+}
+
+/* FAQ Page */
+
+.faq-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-section > details {
+  margin: 2rem;
+}
+
+.faq-section > details summary {
+  outline: 2px solid var(--black);
+  outline-offset: 10px;
+  border-radius: 0.5rem;
+}
+
+.faq-section video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Contact Page */
+
+.contact-section {
+  padding-left: 0%;
+  margin: 4rem;
+  outline: 2px solid var(--black);
+  outline-offset: 15px;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.top-form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.top-form > input {
+  width: 45%;
+  height: 3rem;
+}
+
+.contact-section input {
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+}
+
+.bottom-form {
+  padding-top: 3rem;
+  width: 100%;
+}
+
+.bottom-form textarea {
+  width: 100%;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  border-radius: 1.5rem;
+  border: 2px solid var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+  resize: none;
+}
+
+::placeholder {
+  color: var(--black);
+  opacity: 1;
+}
+
+.submit-button {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 2.5rem;
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  border-radius: 0.5rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .header-main {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+
+  .header-left {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .header-right {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .welcome-text {
+    font-size: 1.25rem;
+  }
+
+  .personal-photo {
+    width: 50%;
+  }
+
+  .skill-list {
+    flex-direction: column;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .skill-list li {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .intro-section {
+    width: 80%;
+  }
+
+  .social-list > li {
+    width: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .left-project,
+  .right-project {
+    flex-direction: column;
+  }
+
+  .left-project > div,
+  .right-project > div {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .left-project img,
+  .right-project img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  .faq-section > details {
+    margin: 1rem;
+  }
+
+  .faq-section > details summary {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  .faq-section > details p {
+    font-size: 1.25rem;
+  }
+
+  .contact-section {
+    margin: 2rem;
+    padding: 1rem;
+  }
+
+  .top-form {
+    flex-direction: column;
+  }
+
+  .top-form > input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .bottom-form textarea {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .submit-button {
+    margin-top: 1.5rem;
+    height: 3rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+  /* About Page */
+
+  .header-main {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+
+  .header-main > div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-right {
+    padding-top: 0.5rem;
+  }
+
+  .header-main li {
+    padding-left: 0;
+  }
+
+  .skill-list {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .skill-list li {
+    padding-bottom: 0.25rem;
+  }
+
+  .intro-section {
+    width: 75%;
+  }
+
+  .personal-photo {
+    width: 50%;
+  }
+
+  /* Projects Page */
+
+  .projects-section div {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .projects-section p {
+    text-align: center;
+  }
+
+  /* Contact Page */
+
+  .contact-section {
+    margin: 2rem;
+    margin-top: 4rem;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+   /* Placeholder for desktop, as no changes needed */
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

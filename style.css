@@ -1,0 +1,163 @@
+body {
+  font-family: sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+#add-post-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+#add-post-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+#post-list {
+  margin-top: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+#post-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+#post-list li:last-child {
+  margin-bottom: 0;
+}
+
+#post-list li .actions {
+  display: flex;
+  align-items: center;
+}
+
+#post-list li .actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#post-list li .actions img {
+  width: 15px;
+}
+
+#post-list li .post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#post-list li .summary-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#post-list li .summary-date {
+  border-bottom: 1px solid #000;
+  width: fit-content;
+}
+
+dialog {
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+dialog h2 {
+  margin-top: 0;
+}
+
+dialog label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+dialog input[type='text'],
+dialog input[type='date'],
+dialog textarea {
+  width: 97%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+dialog textarea {
+  resize: none;
+}
+
+dialog button[type='submit'],
+dialog button[type='button'] {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+dialog button[type='submit']:hover,
+dialog button[type='button']:hover {
+  color: #333;
+}
+
+dialog button[type='submit'] {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 4px;
+}
+
+dialog button[type='submit']:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+dialog button[type='button'] {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 4px;
+}
+
+dialog button[type='button']:hover {
+  background-color: #000;
+  color: #fff;
+}

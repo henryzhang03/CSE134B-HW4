@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Dialogs?</title>
+    <script type="text/javascript" src="dompurify/dist/purify.min.js"></script>
+    <style>
+      #output {
+        font-size: 18px;
+        padding: 8px;
+        border: 1px solid #000;
+        width: fit-content;
+        display: none;
+      }
+
+      a {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simple Dialogs?</h1>
+    <button id="alert-btn">Alert</button>
+    <button id="confirm-btn">Confirm</button>
+    <button id="prompt-btn">Prompt</button>
+    <button id="safer-prompt-btn">Safer Prompt</button>
+    <hr />
+    <output id="output"></output>
+    <script>
+      const output = document.querySelector('#output');
+
+      // Alert Button event listener
+      document.querySelector('#alert-btn').addEventListener('click', () => {
+        output.innerHTML = '';
+        output.style.display = 'none';
+        window.alert('Alert pressed!');
+      });
+
+      // Confirm Button event listener
+      document.querySelector('#confirm-btn').addEventListener('click', () => {
+        output.innerHTML = '';
+        const result = window.confirm('Do you confirm this?');
+        output.innerHTML = `Confirm result : ${result}`;
+        output.style.display = 'block';
+      });
+
+      // Prompt Button event listener
+      document.querySelector('#prompt-btn').addEventListener('click', () => {
+        output.innerHTML = '';
+        output.style.display = 'none';
+        const userInput = window.prompt('What is your name?');
+        if (!userInput || userInput.trim() === '') {
+          output.innerHTML = 'User didn\'t enter anything';
+          output.style.display = 'block';
+        } else {
+          output.innerHTML = `Prompt result : ${userInput}!`;
+          output.style.display = 'block';
+        }
+      });
+
+      // Safer Prompt Button event listener
+      document
+        .querySelector('#safer-prompt-btn')
+        .addEventListener('click', () => {
+          output.innerHTML = '';
+          output.style.display = 'none';
+          const userInput = window.prompt(
+            DOMPurify.sanitize('What is your name?')
+          );
+          if (!userInput || userInput.trim() === '') {
+            output.innerHTML = 'User didn\'t enter anything';
+            output.style.display = 'block';
+          } else {
+            output.innerHTML = `Prompt result : ${DOMPurify.sanitize(
+              userInput
+            )}!`;
+            output.style.display = 'block';
+          }
+        });
+    </script>
+  </body>
+</html>

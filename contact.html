@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Me</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="placeholder.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="header-main">
+          <div class="header-left">
+            <li><a href="index.html">Henry Zhang</a></li>
+          </div>
+          <div class="header-right">
+            <li><a href="index.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="welcome-section">
+        <h1 class="welcome-text">Contact Me</h1>
+        <hr />
+      </section>
+      <section class="contact-section">
+        <form id="contactform">
+          <div class="top-form">
+            <input
+              type="text"
+              placeholder="Name"
+              id="name"
+              name="name"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="bottom-form">
+            <textarea
+              id="message"
+              placeholder="Message"
+              name="message"
+              rows="20"
+              required
+            ></textarea>
+          </div>
+        </form>
+        <button
+          type="submit"
+          class="submit-button"
+          form="contactform"
+          value="Submit"
+        >
+          Submit
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
