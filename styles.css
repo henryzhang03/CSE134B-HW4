@@ -12,6 +12,7 @@ html {
 
 body {
   font-family: 'Inter', sans-serif, Arial, Helvetica, sans-serif;
+  margin: 0px;
 }
 
 :root {
@@ -19,7 +20,66 @@ body {
   --white: #ffffff;
 }
 
+main {
+  padding: 8px;
+}
+
+main,
+header {
+  display: none;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #555;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* About Page */
+
+.header-container {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  height: 80px;
+  margin-top: -24px;
+}
+
+.header-container nav {
+  height: 100%;
+}
+
+.header-container nav ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
 
 .header-main {
   display: flex;
@@ -83,6 +143,10 @@ body {
 
 .skill-list li {
   font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border: 0.5px solid #000;
+  border-radius: 12px;
 }
 
 .intro-section {
@@ -245,10 +309,17 @@ body {
     font-size: 14px;
   }
 
+  .header-container {
+    /* margin-top: 0px; */
+    /* margin-top: 24px; */
+    height: 100px;
+  }
+
   .header-main {
     flex-direction: column;
     align-items: center;
-    padding-bottom: 2rem;
+    justify-content: flex-end;
+    font-size: 18px;
   }
 
   .header-left {
@@ -349,9 +420,19 @@ body {
 @media only screen and (min-width: 481px) and (max-width: 960px) {
   /* About Page */
 
+  .header-container {
+    height: 200px;
+  }
+
+  .header-container nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
   .header-main {
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     padding-bottom: 2rem;
   }
 
@@ -404,10 +485,6 @@ body {
     margin-top: 4rem;
     padding: 1rem;
   }
-}
-
-@media only screen and (min-width: 961px) {
-   /* Placeholder for desktop, as no changes needed */
 }
 
 @-webkit-keyframes scale-up-center {

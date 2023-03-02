@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="placeholder.js"></script>
   </head>
-  <body>
-    <header>
+  <body onload="loaderFunc()">
+    <section id="loader"></section>
+    <header class="header-container">
       <nav>
         <ul class="header-main">
           <div class="header-left">
@@ -31,9 +32,9 @@
       </section>
       <section>
         <picture>
-          <source media="(min-width:400px)" srcset="profilepicture.jpeg" />
+          <source media="(min-width:400px)" srcset="profilepicture.jpg" />
           <img
-            src="profilepicture.jpeg"
+            src="profilepicture.jpg"
             alt="A picture of myself"
             class="personal-photo"
           />
@@ -51,18 +52,7 @@
         <h1>Short Introduction</h1>
         <hr />
         <p>
-          My website showcases my technical abilities and skills as a software
-          developer. It serves as a personal portfolio that showcases my coding
-          projects and achievements, with the aim of helping me secure a job in
-          the software engineering industry. The website's main objective is to
-          demonstrate my technical proficiency, expertise, and understanding of
-          software development to potential employers, making me stand out in a
-          competitive job market. My technical proficiency is shown by including
-          coding languages I am proficient in, projects I have worked on, and
-          any other relevant information that highlights my technical abilities.
-          By providing a clear picture of my skills, my personal portfolio makes
-          it easier for potential employers to understand my abilities and
-          assess my fit in their company.
+          Hi! Welcome to my personal portfolio. I am currently a second year student at the University of California, San Diego, majoring in Computer Science. I enjoy learning new things, and am especially interested in blockchain technologies and web development. During my free time, I enjoy playing tennis or chess, and like inspecting websites that have cool features or animations. I am currently looking for internships for Summer 2023, so please feel free to contact me!
         </p>
       </section>
       <section>
@@ -85,5 +75,6 @@
         </ul>
       </section>
     </main>
+    <script src="loader.js"></script>
   </body>
 </html>

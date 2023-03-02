@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="placeholder.js"></script>
   </head>
-  <body>
-    <header>
+  <body onload="loaderFunc()">
+    <section id="loader"></section>
+    <header class="header-container">
       <nav>
         <ul class="header-main">
           <div class="header-left">
@@ -65,10 +66,11 @@
             </figure>
           </div>
           <div class="project-description">
-            <p>This is a preview of project 3.</p>
+            <p>For my third project, I researched and performed a Life Cycle Analysis (LCA) on emissions from non-recycled plastic-to-energy processes using OpenLCA</p>
           </div>
         </div>
       </section>
     </main>
+    <script src="loader.js"></script>
   </body>
 </html>
