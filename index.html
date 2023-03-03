@@ -22,6 +22,36 @@
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact.html">Contact Me</a></li>
           </div>
+          <a class="header-toggle-icon" onclick="toggleMenu()">☰</a>
+          <div class="header-mobile">
+            <div class="hm-container">
+              <a class="hm-close" onclick="toggleMenu()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+                  />
+                </svg>
+              </a>
+              <ul className="hm-list">
+                <li>
+                  <a href="index.html" class="hm-link">About</a>
+                </li>
+                <li>
+                  <a href="projects.html" class="hm-link">Projects</a>
+                </li>
+                <li>
+                  <a href="faq.html" class="hm-link">FAQ</a>
+                </li>
+                <li>
+                  <a href="contact.html" class="hm-link">Contact Me</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </ul>
       </nav>
     </header>
@@ -40,19 +70,62 @@
           />
         </picture>
       </section>
-      <section>
-        <ul class="skill-list">
-          <li>Java</li>
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>HTML</li>
-        </ul>
+      <section class="skill-section">
+        <div class="skill-container">
+          <h2 class="skill-header">Skills</h2>
+          <div class="skill-card">
+            <div class="row">
+              <a
+                href="https://www.java.com/en/"
+                class="skill-item"
+                target="_blank"
+              >
+                <img src="java.svg" alt="Java" />
+              </a>
+              <a
+                href="https://www.javascript.com/"
+                class="skill-item"
+                target="_blank"
+              >
+                <img src="javascript.svg" alt="JavaScript" />
+              </a>
+              <a
+                href="https://www.python.org/"
+                class="skill-item"
+                target="_blank"
+              >
+                <img src="python.svg" alt="Python" />
+              </a>
+            </div>
+            <div class="row">
+              <a
+                href="https://html.spec.whatwg.org/"
+                class="skill-item"
+                target="_blank"
+              >
+                <img src="html.svg" alt="HTML" />
+              </a>
+              <a href="https://reactjs.org/" class="skill-item" target="_blank">
+                <img src="react.svg" alt="React" />
+              </a>
+              <a href="https://nodejs.org/" class="skill-item" target="_blank">
+                <img src="nodejs.svg" alt="Node.js" />
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="intro-section">
         <h1>Short Introduction</h1>
         <hr />
         <p>
-          Hi! Welcome to my personal portfolio. I am currently a second year student at the University of California, San Diego, majoring in Computer Science. I enjoy learning new things, and am especially interested in blockchain technologies and web development. During my free time, I enjoy playing tennis or chess, and like inspecting websites that have cool features or animations. I am currently looking for internships for Summer 2023, so please feel free to contact me!
+          Hi! Welcome to my personal portfolio. I am currently a second year
+          student at the University of California, San Diego, majoring in
+          Computer Science. I enjoy learning new things, and am especially
+          interested in blockchain technologies and web development. During my
+          free time, I enjoy playing tennis or chess, and like inspecting
+          websites that have cool features or animations. I am currently looking
+          for internships for Summer 2023, so please feel free to contact me!
         </p>
       </section>
       <section>
